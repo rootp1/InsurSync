@@ -1,1 +1,1 @@
-# PrivInsure frontend
+# InsureSync frontend

@@ -5,9 +5,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.classList.add("container");
 
   const title = document.createElement("h2");
-  title.textContent = "Insurance Provider - Set Policy Criteria";
-  title.style.color = "#f7b500";
+  title.textContent = "⬡ PROVIDER PORTAL ⬡";
+  title.style.cssText = "text-align: center; margin-bottom: 10px;";
   container.appendChild(title);
+
+  const subtitle = document.createElement("p");
+  subtitle.textContent = "Configure Insurance Policy Criteria";
+  subtitle.style.cssText = "text-align: center; color: var(--secondary-purple); font-size: 16px; margin-bottom: 30px; opacity: 0.9;";
+  container.appendChild(subtitle);
 
   // Create form container
   const formContainer = document.createElement("div");
@@ -151,8 +156,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Show loading message
     const loadingDiv = document.createElement("div");
     loadingDiv.id = "loading-message-ins";
-    loadingDiv.style.cssText = "margin-top: 20px; padding: 15px; background-color: #444; border-radius: 8px; color: #f7b500;";
-    loadingDiv.textContent = "⏳ Waiting for user... Processing match.";
+    loadingDiv.style.cssText = "margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(109, 40, 217, 0.2)); border-radius: 12px; color: var(--neon-purple); border: 2px solid rgba(139, 92, 246, 0.4); text-align: center; font-weight: 600; animation: pulse 1.5s infinite;";
+    loadingDiv.innerHTML = "⏳ <strong>AWAITING USER CONNECTION...</strong><br><span style='font-size: 14px; opacity: 0.8;'>Processing encrypted eligibility match</span>";
     insuranceForm.appendChild(loadingDiv);
     
     try {
@@ -164,16 +169,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Show result
       const resultDiv = document.createElement("div");
       resultDiv.id = "match-result";
-      resultDiv.style.cssText = "margin-top: 20px; padding: 20px; border-radius: 8px; font-size: 18px; font-weight: bold;";
+      resultDiv.style.cssText = "margin-top: 25px; padding: 25px; border-radius: 15px; font-size: 18px; font-weight: 600; text-align: center; border: 2px solid; box-shadow: 0 8px 24px;";
       
       if (result === 1) {
-        resultDiv.style.backgroundColor = "#2d5016";
-        resultDiv.style.color = "#90ee90";
-        resultDiv.innerHTML = "✅ <strong>Match Found!</strong><br>The user is ELIGIBLE for your insurance policy.";
+        resultDiv.style.backgroundColor = "rgba(16, 185, 129, 0.15)";
+        resultDiv.style.color = "#10B981";
+        resultDiv.style.borderColor = "#10B981";
+        resultDiv.style.boxShadow = "0 8px 24px rgba(16, 185, 129, 0.3)";
+        resultDiv.innerHTML = "✅ <strong style='font-size: 22px; display: block; margin-bottom: 10px;'>MATCH CONFIRMED</strong><span style='font-size: 15px; opacity: 0.9;'>User meets all policy criteria</span>";
       } else {
-        resultDiv.style.backgroundColor = "#4a1515";
-        resultDiv.style.color = "#ffaaaa";
-        resultDiv.innerHTML = "❌ <strong>No Match.</strong><br>The user does NOT meet your policy criteria.";
+        resultDiv.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+        resultDiv.style.color = "#EF4444";
+        resultDiv.style.borderColor = "#EF4444";
+        resultDiv.style.boxShadow = "0 8px 24px rgba(239, 68, 68, 0.3)";
+        resultDiv.innerHTML = "❌ <strong style='font-size: 22px; display: block; margin-bottom: 10px;'>NO MATCH</strong><span style='font-size: 15px; opacity: 0.9;'>User does not meet policy criteria</span>";
       }
       
       // Remove any existing result
@@ -184,8 +193,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
       loadingDiv.remove();
       const errorDiv = document.createElement("div");
-      errorDiv.style.cssText = "margin-top: 20px; padding: 15px; background-color: #4a1515; border-radius: 8px; color: #ffaaaa;";
-      errorDiv.textContent = "❌ Error: " + error;
+      errorDiv.style.cssText = "margin-top: 20px; padding: 20px; background: rgba(239, 68, 68, 0.15); border-radius: 12px; color: #EF4444; border: 2px solid #EF4444; text-align: center; font-weight: 600;";
+      errorDiv.innerHTML = "❌ <strong>COMPUTATION ERROR</strong><br><span style='font-size: 14px; opacity: 0.8;'>" + error + "</span>";
       insuranceForm.appendChild(errorDiv);
     }
   });

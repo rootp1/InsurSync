@@ -146,11 +146,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (result === 1) {
         resultDiv.style.backgroundColor = "#2d5016";
         resultDiv.style.color = "#90ee90";
-        resultDiv.innerHTML = "✅ <strong>Congratulations!</strong><br>You are ELIGIBLE for this insurance policy.";
+        resultDiv.innerHTML = "❌ <strong>Sorry!</strong><br>You are NOT ELIGIBLE for this insurance policy based on the criteria.";
+
       } else {
         resultDiv.style.backgroundColor = "#4a1515";
         resultDiv.style.color = "#ffaaaa";
-        resultDiv.innerHTML = "❌ <strong>Sorry!</strong><br>You are NOT ELIGIBLE for this insurance policy based on the criteria.";
+        resultDiv.innerHTML = "✅ <strong>Congratulations!</strong><br>You are ELIGIBLE for this insurance policy.";
       }
       
       // Remove any existing result
@@ -238,7 +239,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   console.log("MPC protocol ready.");
 
   // Use a shared session code for pairing
-  const sessionCode = "privinsure-session";
+  const sessionCode = "InsureSync-session";
 
   // Event listener to show Insurance form and hide User form
   toggleInsuranceBtn.addEventListener("click", async () => {
