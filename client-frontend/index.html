@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrivInsure - Privacy-Preserving Insurance Eligibility</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color: #f7b500; text-align: center; margin-bottom: 30px;">Welcome to PrivInsure</h1>
+      <p style="color: #f7b500; text-align: center; margin-bottom: 40px; font-size: 18px;">
+        Privacy-preserving insurance eligibility matching using Multi-Party Computation
+      </p>
+      
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="user.html" style="text-decoration: none;">
+          <button class="toggle-button" style="padding: 30px 50px; font-size: 20px; cursor: pointer;">
+            👤 I'm a User
+            <div style="font-size: 14px; margin-top: 10px; font-weight: normal;">Check if I'm eligible for insurance</div>
+          </button>
+        </a>
+        
+        <a href="insurance.html" style="text-decoration: none;">
+          <button class="toggle-button" style="padding: 30px 50px; font-size: 20px; cursor: pointer;">
+            🏢 I'm an Insurance Provider
+            <div style="font-size: 14px; margin-top: 10px; font-weight: normal;">Set policy criteria</div>
+          </button>
+        </a>
+      </div>
+      
+      <div style="margin-top: 50px; padding: 20px; background-color: #333; border-radius: 10px;">
+        <h3 style="color: #f7b500;">How it works:</h3>
+        <ol style="color: #f7b500; line-height: 2;">
+          <li>Open this page in <strong>two separate browser windows or tabs</strong></li>
+          <li>In one window: Click "I'm an Insurance Provider" and set your policy criteria</li>
+          <li>In the other window: Click "I'm a User" and enter your health information</li>
+          <li>Both parties submit their data</li>
+          <li>The system securely computes eligibility <strong>without revealing private data</strong></li>
+          <li>Both parties see the result: eligible or not eligible</li>
+        </ol>
+        <p style="color: #f7b500; margin-top: 20px;">
+          🔒 <strong>Privacy Guaranteed:</strong> Neither party learns the other's private information, only the final eligibility result.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
