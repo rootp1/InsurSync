@@ -8,40 +8,44 @@
   </head>
   <body>
     <div class="container">
-      <h1 style="color: #f7b500; text-align: center; margin-bottom: 30px;">Welcome to PrivInsure</h1>
-      <p style="color: #f7b500; text-align: center; margin-bottom: 40px; font-size: 18px;">
-        Privacy-preserving insurance eligibility matching using Multi-Party Computation
+      <h1 style="text-align: center; margin-bottom: 20px;">⬡ PRIVINSURE ⬡</h1>
+      <p style="color: var(--secondary-purple); text-align: center; margin-bottom: 40px; font-size: 18px; font-weight: 500;">
+        ⚡ Privacy-Preserving Insurance Eligibility Matching Using Multi-Party Computation ⚡
       </p>
       
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+      <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
         <a href="user.html" style="text-decoration: none;">
-          <button class="toggle-button" style="padding: 30px 50px; font-size: 20px; cursor: pointer;">
-            👤 I'm a User
-            <div style="font-size: 14px; margin-top: 10px; font-weight: normal;">Check if I'm eligible for insurance</div>
+          <button class="toggle-button" style="padding: 35px 55px; font-size: 18px; cursor: pointer; min-width: 280px;">
+            <div style="font-size: 32px; margin-bottom: 10px;">👤</div>
+            <div style="font-size: 20px; font-weight: 700;">USER PORTAL</div>
+            <div style="font-size: 13px; margin-top: 10px; font-weight: normal; opacity: 0.9; text-transform: none; letter-spacing: 0.5px;">Check Your Eligibility Status</div>
           </button>
         </a>
         
         <a href="insurance.html" style="text-decoration: none;">
-          <button class="toggle-button" style="padding: 30px 50px; font-size: 20px; cursor: pointer;">
-            🏢 I'm an Insurance Provider
-            <div style="font-size: 14px; margin-top: 10px; font-weight: normal;">Set policy criteria</div>
+          <button class="toggle-button" style="padding: 35px 55px; font-size: 18px; cursor: pointer; min-width: 280px;">
+            <div style="font-size: 32px; margin-bottom: 10px;">🏢</div>
+            <div style="font-size: 20px; font-weight: 700;">PROVIDER PORTAL</div>
+            <div style="font-size: 13px; margin-top: 10px; font-weight: normal; opacity: 0.9; text-transform: none; letter-spacing: 0.5px;">Configure Policy Criteria</div>
           </button>
         </a>
       </div>
       
-      <div style="margin-top: 50px; padding: 20px; background-color: #333; border-radius: 10px;">
-        <h3 style="color: #f7b500;">How it works:</h3>
-        <ol style="color: #f7b500; line-height: 2;">
-          <li>Open this page in <strong>two separate browser windows or tabs</strong></li>
-          <li>In one window: Click "I'm an Insurance Provider" and set your policy criteria</li>
-          <li>In the other window: Click "I'm a User" and enter your health information</li>
-          <li>Both parties submit their data</li>
-          <li>The system securely computes eligibility <strong>without revealing private data</strong></li>
-          <li>Both parties see the result: eligible or not eligible</li>
+      <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(42, 42, 42, 0.7) 100%); border-radius: 15px; border: 2px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);">
+        <h3 style="color: var(--secondary-purple); margin-bottom: 25px;">⚙️ PROTOCOL EXECUTION:</h3>
+        <ol style="color: var(--off-white); line-height: 2.2; font-size: 16px; font-weight: 400;">
+          <li>Launch <strong style="color: var(--neon-purple);">two separate browser instances</strong> (windows or tabs)</li>
+          <li>Instance 1: Navigate to <strong style="color: var(--neon-purple);">Provider Portal</strong> → Configure policy parameters</li>
+          <li>Instance 2: Navigate to <strong style="color: var(--neon-purple);">User Portal</strong> → Input health metrics</li>
+          <li>Both parties <strong style="color: var(--neon-purple);">submit encrypted data</strong> to secure computation layer</li>
+          <li>MPC protocol executes eligibility computation <strong style="color: var(--neon-purple);">without revealing private inputs</strong></li>
+          <li>Both parties receive <strong style="color: var(--neon-purple);">binary eligibility result</strong>: APPROVED / DENIED</li>
         </ol>
-        <p style="color: #f7b500; margin-top: 20px;">
-          🔒 <strong>Privacy Guaranteed:</strong> Neither party learns the other's private information, only the final eligibility result.
-        </p>
+        <div style="margin-top: 30px; padding: 20px; background: rgba(139, 92, 246, 0.1); border-left: 4px solid var(--primary-purple); border-radius: 8px;">
+          <p style="color: var(--pure-white); margin: 0; font-size: 16px; font-weight: 500;">
+            🔒 <strong style="color: var(--neon-purple);">ZERO-KNOWLEDGE GUARANTEE:</strong> Cryptographic protocols ensure neither party gains knowledge of the other's private information—only the final eligibility outcome is revealed.
+          </p>
+        </div>
       </div>
     </div>
   </body>
